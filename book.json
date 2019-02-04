@@ -1,6 +1,6 @@
 {"book": [
-		{ "name":"java", "price":299},
-		{ "name":"c", "price":348},
-		{ "name":"php", "price":267}
+		{ "name":"java", "price":299, "dataArchiviazione":"24/01/2019"},
+		{ "name":"c", "price":348, "dataArchiviazione":"16/01/2000"},
+		{ "name":"php", "price":267, "dataArchiviazione":"23/01/2008"}
 	 ]
 }
