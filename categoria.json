@@ -1,0 +1,8 @@
+{"reparti": [
+		{ "id":01,"tipo":"Da non perdere", "sconto":20},
+		{ "id":02,"tipo":"I più venduti", "sconto":null},
+		{ "id":03,"tipo":"Ultimi arrivi", "sconto":null},
+		{ "id":04,"tipo":"offerte speciali", "sconto":25},
+		{ "id":05,"tipo":"remainders", "sconto":50}
+			 ]
+}
