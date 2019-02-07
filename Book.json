@@ -1,6 +1,0 @@
-{"book": [
-		{ "id":01 , "titolo":"java", "price":35, "pagine":400, "rilegato": 1, "annopub":2000 , "collana":null, "categoria":01, "immagine":null, "reparto":01, "editore":"enaudi", "autore":"Giovanni"},
-		{ "id":02 , "titolo":"ciao", "price":30, "pagine":300, "rilegato": 0, "annopub":2001 , "collana":null, "categoria":02, "immagine":null, "reparto":02, "editore":"enaudi", "autore":"Luigi"},
-		{ "id":03 , "titolo":"c", "price":20, "pagine":100, "rilegato": 0, "annopub":2019 , "collana":null, "categoria":03, "immagine":null, "reparto":09, "editore":"enaudi", "autore":"Matteo"}
-	 ]
-}
