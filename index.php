@@ -2,18 +2,24 @@
 // process client request (via URL)
 	header ("Content-Type_application/json");
 	include ("function.php");
-	if(!empty($_GET['name'])){
-	
-			$name=$_GET['name'];
-			$price=get_price($name);
-	
-			if(empty($price))
-		//book not found
-			deliver_response(200,"book not found", NULL);
-			else
-			//respond book price
-			deliver_response(200,"book found", $price);
-				}
+	if(!empty($_GET['op']))
+	{
+		$operation=$_GET['op'];
+		
+		switch($operation)
+		{
+			case 1:
+				$name=$_GET['name'];
+				$price=get_price($name);
+				if(empty($price))
+				deliver_response(200,"book not found", NULL);
+				else
+				deliver_response(200,"book found", $price);
+				break;
+			default:
+				break;
+		}
+	}
 	else
 	{
 		//throw invalid request

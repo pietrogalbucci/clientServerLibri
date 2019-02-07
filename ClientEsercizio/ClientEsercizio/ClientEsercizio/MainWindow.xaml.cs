@@ -34,21 +34,32 @@ namespace ClientEsercizio
 
         }
 
+
         async static void GetRequest(string url)
         {
             using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage response = await client.GetAsync(url))
+                // Richiesta al server
+                using (HttpResponseMessage response = await (client.GetAsync(url)))
                 {
+                    // Estrazione del contenuto
                     using (HttpContent content = response.Content)
                     {
-                        string mycontent = await content.ReadAsStringAsync();
-                        MessageBox.Show(mycontent);
+                        string myContent = await (content.ReadAsStringAsync());
+
+                        MessageBox.Show(myContent);
                     }
-
                 }
-
             }
+        }
+
+        private void btn_Quantità_Click(object sender, RoutedEventArgs e)
+        {
+            // URL a cui inoltrare la richiesta
+            string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" +
+                         "?op=1&name=java";
+
+            GetRequest(url);
         }
     }
 }
