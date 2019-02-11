@@ -12,10 +12,20 @@
 			 break;
 		 }
 	 }
-	 
 	
-	 
  }
  
+ function get_comics()
+ {
+	 $tmp = "book.json";
+	 $str = file_get_contents($tmp);
+	 $books = json_decode($str, true);
+	 
+	 foreach()
+ }
+ 
+ 
+ //fumetti id 9 reparti.json
+ //ultimi arrivi id 3 categoria.json
 
 ?>
