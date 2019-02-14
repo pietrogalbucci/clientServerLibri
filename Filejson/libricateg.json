@@ -1,0 +1,10 @@
+{"libricateg": [
+	{"id":1, "categoria":2},
+	{"id":2, "categoria":1},
+	{"id":2, "categoria":1},
+	{"id":3, "categoria":2},
+	{"id":4, "categoria":5},
+	{"id":5, "categoria":4},
+	{"id":6, "categoria":3}
+	 ]
+}
