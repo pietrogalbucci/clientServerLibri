@@ -1,4 +1,6 @@
 <?php
+
+//query per test vari e debug
  function get_price($find){
 	$tmp = "Filejson/book.json";
 	$str = file_get_contents($tmp);
@@ -133,6 +135,22 @@
 	}
 	return $result;
 		
+ }
+ 
+ function get_by_date($data1, $data2)
+ {
+	 //formato data : aaaa-mm-gg
+	 
+	 $queryBooks = array();
+	 
+	 $tmp = "Filejson/book.json";
+	 $str = file_get_contents($tmp);
+	 $books = json_decode($str, true);
+	 
+	 foreach($books['book'] as $book)
+	 {
+		 
+	 }
  }
  
  //array_push($CatSconto, array('Sconto'=>$cat['Sconto'],'Tipo'=>$cat['Tipo']));

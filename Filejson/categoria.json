@@ -1,8 +1,0 @@
-{"categoria": [
-		{ "id":1,"tipo":"Da non perdere", "sconto":20},
-		{ "id":2,"tipo":"I più venduti", "sconto":0},
-		{ "id":3,"tipo":"Ultimi arrivi", "sconto":0},
-		{ "id":4,"tipo":"offerte speciali", "sconto":25},
-		{ "id":5,"tipo":"remainders", "sconto":50}
-		 ]
-}

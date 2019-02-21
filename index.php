@@ -23,13 +23,18 @@
 				else
 				deliver_response(200, "comics quantity", $name);
 				break;
-			//case 3:		
-			default:
+			case 3:		
 				$result=get_sales();
 				if(empty($result))
 					deliver_response(200, "no discount found", NULL);
 				else
 					deliver_response(200,"",$result);
+				break;
+			case 4:
+				$data1=$_GET['data1'];
+				$data2=$_GET['data2'];
+				break;
+			default:
 				break;
 		}
 	}
