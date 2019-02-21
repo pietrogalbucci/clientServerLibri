@@ -1,0 +1,10 @@
+{"libricateg": [
+	{"id":01}
+	{"id":02, "categoria":07},
+	{"id":02, "categoria":01},
+	{"id":03, "categoria":02},
+	{"id":04, "categoria":05},
+	{"id":05, "categoria":03},
+	{"id":06, "categoria":09}
+	 ]
+}
