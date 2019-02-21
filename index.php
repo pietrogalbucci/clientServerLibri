@@ -16,7 +16,20 @@
 				else
 				deliver_response(200,"book found", $price);
 				break;
+			case 2:
+				$name = get_comics();
+				if(empty($name))
+				deliver_response(200, "no comics found", NULL);
+				else
+				deliver_response(200, "comics quantity", $name);
+				break;
+			//case 3:		
 			default:
+				$result=get_sales();
+				if(empty($result))
+					deliver_response(200, "no discount found", NULL);
+				else
+					deliver_response(200,"",$result);
 				break;
 		}
 	}

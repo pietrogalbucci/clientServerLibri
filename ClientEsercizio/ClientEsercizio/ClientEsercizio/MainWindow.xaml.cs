@@ -29,7 +29,7 @@ namespace ClientEsercizio
         private void btn_GET_Click(object sender, RoutedEventArgs e)
         {
 
-            string url = "http://10.13.100.29/Lavoro/EsercizioTPI/index.php?name=" + txt_Libro.Text;
+            string url = "http://10.13.100.29/Lavoro/EsercizioTPI/index.php?op=1&name=" + txt_Libro.Text;
             GetRequest(url);
 
         }
@@ -57,8 +57,15 @@ namespace ClientEsercizio
         {
             // URL a cui inoltrare la richiesta
             string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" +
-                         "?op=1&name=java";
+                         "?op=2";
 
+            GetRequest(url);
+        }
+
+        private void btn_sconto_Click(object sender, RoutedEventArgs e)
+        {
+            string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" +
+                         "?op=3";
             GetRequest(url);
         }
     }
