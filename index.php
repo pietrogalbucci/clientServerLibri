@@ -21,7 +21,7 @@
 				if(empty($name))
 				deliver_response(200, "no comics found", NULL);
 				else
-				deliver_response(200, "comics quantity", $name);
+				deliver_response(200, "quantity", $name);
 				break;
 			case 3:		
 				$result=get_sales();
@@ -33,6 +33,11 @@
 			case 4:
 				$data1=$_GET['data1'];
 				$data2=$_GET['data2'];
+				$result=get_by_date($data1,$data2);
+				if(empty($result))
+					deliver_response(200, "no books found", NULL);
+				else
+					deliver_response(200,"",$result);
 				break;
 			default:
 				break;

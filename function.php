@@ -147,10 +147,28 @@
 	 $str = file_get_contents($tmp);
 	 $books = json_decode($str, true);
 	 
+	 $data1= new DateTime($data1);
+	 $data2= new DateTime($data2);
+	 
+	 $result="";
+	 $id=0;
+	 
 	 foreach($books['book'] as $book)
-	 {
-		 
-	 }
+		{
+			$currentDate = new DateTime($book['dataarcm']);
+			
+			if(date_diff($data1, $currentDate)->format('%R%a') > 0)
+				if ((date_diff($data1, $currentDate)->format('$R%a')) <= (date_diff($data1, $data2)->format('%R%a'))){
+					$queryBooks[$id]['titolo']=$book['titolo'];
+					$id++;
+				}
+			
+		}
+	foreach($queryBooks as $query)
+	{
+		$result .=" ".$query['titolo'];
+	}
+	return $result;
  }
  
  //array_push($CatSconto, array('Sconto'=>$cat['Sconto'],'Tipo'=>$cat['Tipo']));
