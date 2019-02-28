@@ -77,5 +77,12 @@ namespace ClientEsercizio
               //          "?op=4&data1=2001-01-01&data2=2020-01-01";
             GetRequest(url);
         }
+
+        private void btn_cart_Click(object sender, RoutedEventArgs e)
+        {
+            string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" +
+                         "?op=5&id="+txt_idCart.Text;
+            GetRequest(url);
+        }
     }
 }

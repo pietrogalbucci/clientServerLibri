@@ -39,6 +39,13 @@
 				else
 					deliver_response(200,"",$result);
 				break;
+			case 5:
+				$id=$_GET['id'];
+				$result=get_shopping_cart($id);
+				if(empty($result))
+					deliver_response(200,"no cart found", NULL);
+				else
+					deliver_response(200,"",$result);
 			default:
 				break;
 		}

@@ -193,13 +193,52 @@
 	 $str = file_get_contents($tmp);
 	 $carrello = json_decode($str, true);
 	 
+	 $result = "";
+	 
+	 $cont = 0;
+	 
 	 //Verificare ID Carrello, andare in libricarrello e prelevare l'id del libro, andare in libri
 	 //e prelevare il titolo del libro dall'id, andare in utenti e prelevare l'utente dal numero di telefono del carrello
 	 
 	 foreach($libricarrello['libricarrello'] as $cart)
 	 {
-		 
+		 if($id == $cart['carrello'])
+		 {
+			 $idlibro = $cart['libro'];
+			 $idcarrello = $cart['carrello'];
+			 $queryBooks[$cont]['quantity']=$cart['copie'];
+			 foreach($carrello['cart'] as $cart)
+			 {
+				if($idcarrello == $cart['id'])
+				{
+					$telefono = $cart['utente'];
+				}
+			 }
+			 foreach($utenti['utenti'] as $users)
+			 {
+				 if($users['telefono']==$telefono)
+				 {
+					 $queryBooks[$cont]['nome'] = $users['nome'];
+					 $queryBooks[$cont]['cognome']=$users['cognome'];
+				 }
+			 }
+			 foreach($books['book'] as $book)
+			 {
+				 if($idlibro == $book['id'])
+				 {
+					 $queryBooks[$cont]['titolo']=$book['titolo'];
+				 }
+			 }
+		 }
+		 $cont++;
 	 }
+	 
+	 foreach($queryBooks as $query)
+	{
+		$result .= " ".$query['titolo']." ".$query['quantity']." ".$query['nome']." ".$query['cognome'];
+	}
+	 return $result;
+	 //queryBooks titolo,quantity,nome,cognome
 	 
  }
  
