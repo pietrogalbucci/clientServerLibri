@@ -90,14 +90,14 @@ namespace ClientEsercizio
                     ok = false;
                     MessageBox.Show("Il primo anno inserito è maggiore rispetto al secondo");
                 }
-                else
-                {
-                    if (month1 > month2)
-                    {
-                        ok = false;
-                        MessageBox.Show("Il primo mese inserito è maggiore rispetto al secondo");
-                    }
-                }
+              
+                
+                if (month1 > month2)
+                  {
+                       ok = false;
+                       MessageBox.Show("Il primo mese inserito è maggiore rispetto al secondo");
+                  }
+                
 
                 if (ok == true)
                 {
