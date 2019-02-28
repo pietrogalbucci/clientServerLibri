@@ -1,4 +1,4 @@
-[{"telefono":"220-373-5788","nome":"Gerhardt","cognome":"Greenhead","e-mail":"Gerhardt Greenhead","password":"Iguana, land","città":"Garça","nazione":"Brazil","cap":"890"},
+{ "utenti": [{"telefono":"220-373-5788","nome":"Gerhardt","cognome":"Greenhead","e-mail":"Gerhardt Greenhead","password":"Iguana, land","città":"Garça","nazione":"Brazil","cap":"890"},
 {"telefono":"267-189-6327","nome":"Mervin","cognome":"Capstick","e-mail":"Mervin Capstick","password":"Duck, white-faced whistling","città":"Manjakandriana","nazione":"Madagascar","cap":"47"},
 {"telefono":"901-210-4662","nome":"Timothea","cognome":"McKinnell","e-mail":"Timothea McKinnell","password":"House crow","città":"Greater Napanee","nazione":"Canada","cap":"210"},
 {"telefono":"836-989-5335","nome":"Timothea","cognome":"Jenner","e-mail":"Bancroft Jenner","password":"Red kangaroo","città":"Frakulla e Madhe","nazione":"Albania","cap":"043"},
@@ -20,3 +20,4 @@
 {"telefono":"939-317-6280","nome":"Anderson","cognome":"Benaine","e-mail":"Anderson Benaine","password":"Dolphin, striped","città":"Lanas","nazione":"Philippines","cap":"4855"},
 {"telefono":"755-922-6401","nome":"Joyce","cognome":"Tavener","e-mail":"Joyce Tavener","password":"Asian foreset tortoise","città":"Khoronk’","nazione":"Armenia","cap":"71"},
 {"telefono":"754-315-9422","nome":"Brenna","cognome":"Nano","e-mail":"Brenna Nano","password":"Crane, sarus","città":"Fort Lauderdale","nazione":"United States","cap":"29"}]
+}

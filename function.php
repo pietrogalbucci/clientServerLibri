@@ -158,7 +158,7 @@
 			$currentDate = new DateTime($book['dataarcm']);
 			
 			if(date_diff($data1, $currentDate)->format('%R%a') > 0)
-				if ((date_diff($data1, $currentDate)->format('$R%a')) <= (date_diff($data1, $data2)->format('%R%a'))){
+				if ((date_diff($data1, $currentDate)->format('%R%a')) <= (date_diff($data1, $data2)->format('%R%a'))){
 					$queryBooks[$id]['titolo']=$book['titolo'];
 					$id++;
 				}
@@ -169,6 +169,38 @@
 		$result .=" ".$query['titolo'];
 	}
 	return $result;
+ }
+ 
+ function get_shopping_cart($id)
+ {
+	 //dato l'id di un carrello elencare i titoli dei libri acquistati con relatia quantità e username utente
+	 
+	 $queryBooks = array();
+	 
+	 $tmp = "Filejson/libricarrello.json";
+	 $str = file_get_contents($tmp);
+	 $libricarrello = json_decode($str, true);
+	 
+	 $tmp = "Filejson/utenti.json";
+	 $str = file_get_contents($tmp);
+	 $utenti = json_decode($str, true);
+	 
+	 $tmp = "Filejson/book.json";
+	 $str = file_get_contents($tmp);
+	 $books = json_decode($str, true);
+	 
+	 $tmp = "Filejson/carrello.json";
+	 $str = file_get_contents($tmp);
+	 $carrello = json_decode($str, true);
+	 
+	 //Verificare ID Carrello, andare in libricarrello e prelevare l'id del libro, andare in libri
+	 //e prelevare il titolo del libro dall'id, andare in utenti e prelevare l'utente dal numero di telefono del carrello
+	 
+	 foreach($libricarrello['libricarrello'] as $cart)
+	 {
+		 
+	 }
+	 
  }
  
  //array_push($CatSconto, array('Sconto'=>$cat['Sconto'],'Tipo'=>$cat['Tipo']));
