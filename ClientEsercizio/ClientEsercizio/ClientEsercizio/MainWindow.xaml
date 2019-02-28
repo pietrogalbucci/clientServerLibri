@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="btn_fumetti" Content="Ultimi arrivi fumetti&#xA;" HorizontalAlignment="Left" Margin="599,6,0,0" VerticalAlignment="Top" Width="170" Click="btn_fumetti_Click"/>
-        <ListBox x:Name="lbx_fumetti" HorizontalAlignment="Left" Height="238" Margin="10,100,0,0" VerticalAlignment="Top" Width="187"/>
-        <ListBox x:Name="lbx_sconto" HorizontalAlignment="Left" Height="238" Margin="202,100,0,0" VerticalAlignment="Top" Width="180"/>
-        <Button x:Name="btn_sconto" Content="Libri scontati" HorizontalAlignment="Left" Height="32" Margin="202,47,0,0" VerticalAlignment="Top" Width="180" Click="btn_sconto_Click"/>
+        <ListBox x:Name="lbx_fumetti" HorizontalAlignment="Left" Height="39" Margin="10,100,0,0" VerticalAlignment="Top" Width="340"/>
+        <ListBox x:Name="lbx_sconto" HorizontalAlignment="Left" Height="39" Margin="10,247,0,0" VerticalAlignment="Top" Width="340"/>
+        <Button x:Name="btn_sconto" Content="Libri scontati" HorizontalAlignment="Left" Height="32" Margin="10,194,0,0" VerticalAlignment="Top" Width="340" Click="btn_sconto_Click"/>
         <Label x:Name="lbl_month" Content="mese" HorizontalAlignment="Left" Margin="456,173,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_year" Content="anno" HorizontalAlignment="Left" Margin="521,173,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_month1" HorizontalAlignment="Left" Height="32" Margin="456,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38"/>
@@ -23,7 +23,7 @@
         <ListBox x:Name="lbx_ricerca" HorizontalAlignment="Left" Height="165" Margin="581,173,0,0" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="Txt_codice_carrello" HorizontalAlignment="Left" Height="36" Margin="106,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
         <Label x:Name="lbl_codice" Content="codice carrello :" HorizontalAlignment="Left" Height="36" Margin="10,6,0,0" VerticalAlignment="Top" Width="91"/>
-        <Button x:Name="btn_carrello" Content="Carrello" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" VerticalAlignment="Top" Width="187" Click="btn_carrello_Click"/>
+        <Button x:Name="btn_carrello" Content="Carrello" HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" VerticalAlignment="Top" Width="340" Click="btn_carrello_Click"/>
         <Label x:Name="lbl_libri" Content="" HorizontalAlignment="Left" Margin="599,47,0,0" VerticalAlignment="Top" Width="170" Height="32"/>
         <Label x:Name="lbl_day" Content="giorno" HorizontalAlignment="Left" Margin="391,173,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_day1" HorizontalAlignment="Left" Height="32" Margin="391,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38"/>

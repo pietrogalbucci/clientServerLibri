@@ -26,8 +26,32 @@ namespace ClientEsercizio
             InitializeComponent();
         }
 
-        //static string quantità = "0";
+        static string quantità = "0";
 
+
+        async static Task GetRequest4(string url)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage response = await client.GetAsync(url))
+                {
+                    using (HttpContent content = response.Content)
+                    {
+
+                        int start = 0;
+                        string mycontent = await content.ReadAsStringAsync();
+                        start = mycontent.IndexOf("data", start);
+
+
+                        if (mycontent.Substring(start).Contains("data"))
+                            quantità = mycontent.Substring(start + 8, mycontent.Length - start - 10);
+
+                    }
+
+                }
+
+            }
+        }
 
         async static Task GetRequest(string url)
         {
@@ -37,13 +61,32 @@ namespace ClientEsercizio
                 {
                     using (HttpContent content = response.Content)
                     {
-                        //int start = 0;
+
                         string mycontent = await content.ReadAsStringAsync();
-                        //start = mycontent.IndexOf("quantity", start);
                         MessageBox.Show(mycontent);
 
-                        //if (mycontent.Substring(start).Contains("quantity"))
-                        //quantità = mycontent.Substring(start + 17, mycontent.Length - start -18);
+                    }
+
+                }
+
+            }
+        }
+
+        async static Task GetRequest1(string url)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage response = await client.GetAsync(url))
+                {
+                    using (HttpContent content = response.Content)
+                    {
+                        int start = 0;
+                        string mycontent = await content.ReadAsStringAsync();
+                        start = mycontent.IndexOf("quantity", start);
+
+
+                        if (mycontent.Substring(start).Contains("quantity"))
+                            quantità = mycontent.Substring(start + 17, mycontent.Length - start - 18);
 
 
                     }
@@ -56,19 +99,19 @@ namespace ClientEsercizio
         private async void btn_fumetti_Click(object sender, RoutedEventArgs e)
         {
             string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" + "?op=2";
-            Task task = GetRequest(url);
+            Task task = GetRequest1(url);
             await task;
 
-            //lbl_libri.Content = quantità;
+            lbl_libri.Content = quantità;
         }
 
         private async void btn_sconto_Click(object sender, RoutedEventArgs e)
         {
             string url = @"http://10.13.100.29/Lavoro/EsercizioTPI/" + "?op=3";
-            Task task = GetRequest(url);
+            Task task = GetRequest4(url);
             await task;
 
-            //lbl_libri.Content = quantità;
+            lbx_sconto.Items.Add(quantità);
         }
 
         private async void btn_data_Click(object sender, RoutedEventArgs e)
