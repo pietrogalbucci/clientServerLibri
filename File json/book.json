@@ -1,0 +1,11 @@
+{"book": [
+		{ "id":1 , "titolo":"java", "price":35, "pagine":400, "rilegato": null, "annopub":2000 , "collana":null, "categoria":1, "immagine":null, "reparto":1, "editore":5, "autore":2, "dataarcm":"2000-01-16"},
+		{ "id":2 , "titolo":"ciao", "price":30, "pagine":300, "rilegato": null, "annopub":2001 , "collana":null, "categoria":2, "immagine":null, "reparto":2, "editore":9, "autore":10, "dataarcm":"2004-04-21"},	
+		{ "id":3 , "titolo":"c", "price":20, "pagine":100, "rilegato": null, "annopub":2019 , "collana":null, "categoria":3, "immagine":null, "reparto":9, "editore":14, "autore":9, "dataarcm":"2008-05-24"},
+	 	{ "id":4 , "titolo":"Above", "price":15, "pagine":200, "rilegato": null, "annopub":2010 , "collana":null, "categoria":1, "immagine":null, "reparto":6, "editore":3, "autore":6, "dataarcm":"2011-11-12"},
+		{ "id":5 , "titolo":"After", "price":10, "pagine":90, "rilegato": null, "annopub":2017 , "collana":null, "categoria":1, "immagine":null, "reparto":7, "editore":1, "autore":7, "dataarcm":"2015-12-11"},
+		{ "id":6 , "titolo":"Beyond", "price":24, "pagine":100, "rilegato": null, "annopub":2018 , "collana":null, "categoria":3, "immagine":null, "reparto":9, "editore":12, "autore":4, "dataarcm":"2007-06-26"}
+	 
+	 
+	 ]
+}
